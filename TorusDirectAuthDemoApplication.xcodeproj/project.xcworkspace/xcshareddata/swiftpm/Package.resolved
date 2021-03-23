@@ -87,8 +87,8 @@
         "repositoryURL": "https://github.com/torusresearch/torus-direct-swift-sdk",
         "state": {
           "branch": null,
-          "revision": "11c4db2f8a3a9632bedf8e8c2a7c4b259947d4fa",
-          "version": "0.1.2"
+          "revision": "98f788761abf1a94341bb6dba538786dfe42f4b5",
+          "version": "0.3.0"
         }
       },
       {

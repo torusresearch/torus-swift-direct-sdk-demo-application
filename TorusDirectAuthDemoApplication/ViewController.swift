@@ -7,6 +7,7 @@
 
 import UIKit
 import TorusSwiftDirectSDK
+import SafariServices
 
 class ViewController: UIViewController {
     
@@ -30,27 +31,30 @@ class ViewController: UIViewController {
                                      redirectURL: "tdsdk://tdsdk/oauthCallback",
                                      browserRedirectURL: "https://scripts.toruswallet.io/redirect.html",
                                      jwtParams: ["domain":"torus-test.auth0.com"])
+
+        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "torus-auth0-github-lrc", subVerifierDetails: [sub], loglevel: .info)
         
-        let tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: "torus-auth0-github-lrc", subVerifierDetails: [sub], loglevel: .error)
-        tdsdk.triggerLogin(browserType: .external).done{ data in
+        tdsdk.triggerLogin(controller: self, browserType: .sfsafari, modalPresentationStyle: .popover).done{ data in
             print("private key rebuild", data)
-            
-            let alert = UIAlertController(title: "Public address", message: data["publicAddress"] as! String, preferredStyle: .alert)
+
+            let alert = UIAlertController(title: "Public address", message: data["publicAddress"] as? String, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                                            switch action.style{
-                                                case .default:
-                                                    print("default")
-                                                    
-                                                case .cancel:
-                                                    print("cancel")
-                                                    
-                                                case .destructive:
-                                                    print("destructive")
-                                                    
-                                                    
-                                            }}))
+                switch action.style{
+                    case .default:
+                        print("default")
+
+                    case .cancel:
+                        print("cancel")
+
+                    case .destructive:
+                        print("destructive")
+
+
+                    @unknown default:
+                        fatalError()
+                }}))
             self.present(alert, animated: true, completion: nil)
-            
+
         }.catch{ err in
             print(err)
         }
