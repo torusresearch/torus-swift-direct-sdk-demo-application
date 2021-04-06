@@ -13,7 +13,7 @@
 		5135C67425DF632400679424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5135C67225DF632400679424 /* Main.storyboard */; };
 		5135C67625DF632500679424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5135C67525DF632500679424 /* Assets.xcassets */; };
 		5135C67925DF632500679424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5135C67725DF632500679424 /* LaunchScreen.storyboard */; };
-		5135C68325DF6FDA00679424 /* TorusSwiftDirectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 5135C68225DF6FDA00679424 /* TorusSwiftDirectSDK */; };
+		51A9EC37261C6E63000B2495 /* TorusSwiftDirectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 51A9EC36261C6E63000B2495 /* TorusSwiftDirectSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5135C68325DF6FDA00679424 /* TorusSwiftDirectSDK in Frameworks */,
+				51A9EC37261C6E63000B2495 /* TorusSwiftDirectSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +44,7 @@
 			children = (
 				5135C66B25DF632400679424 /* TorusDirectAuthDemoApplication */,
 				5135C66A25DF632400679424 /* Products */,
+				5162DC1626183BFA00D14868 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +70,13 @@
 			path = TorusDirectAuthDemoApplication;
 			sourceTree = "<group>";
 		};
+		5162DC1626183BFA00D14868 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,7 +94,7 @@
 			);
 			name = TorusDirectAuthDemoApplication;
 			packageProductDependencies = (
-				5135C68225DF6FDA00679424 /* TorusSwiftDirectSDK */,
+				51A9EC36261C6E63000B2495 /* TorusSwiftDirectSDK */,
 			);
 			productName = TorusDirectAuthDemoApplication;
 			productReference = 5135C66925DF632400679424 /* TorusDirectAuthDemoApplication.app */;
@@ -116,7 +124,7 @@
 			);
 			mainGroup = 5135C66025DF632400679424;
 			packageReferences = (
-				5135C68125DF6FDA00679424 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */,
+				51A9EC35261C6E63000B2495 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */,
 			);
 			productRefGroup = 5135C66A25DF632400679424 /* Products */;
 			projectDirPath = "";
@@ -295,6 +303,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 2Q63NCPY55;
 				INFOPLIST_FILE = TorusDirectAuthDemoApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -314,6 +323,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 2Q63NCPY55;
 				INFOPLIST_FILE = TorusDirectAuthDemoApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -351,20 +361,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5135C68125DF6FDA00679424 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */ = {
+		51A9EC35261C6E63000B2495 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/torusresearch/torus-direct-swift-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
+				minimumVersion = 0.3.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5135C68225DF6FDA00679424 /* TorusSwiftDirectSDK */ = {
+		51A9EC36261C6E63000B2495 /* TorusSwiftDirectSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5135C68125DF6FDA00679424 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */;
+			package = 51A9EC35261C6E63000B2495 /* XCRemoteSwiftPackageReference "torus-direct-swift-sdk" */;
 			productName = TorusSwiftDirectSDK;
 		};
 /* End XCSwiftPackageProductDependency section */

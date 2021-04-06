@@ -87,8 +87,8 @@
         "repositoryURL": "https://github.com/torusresearch/torus-direct-swift-sdk",
         "state": {
           "branch": null,
-          "revision": "98f788761abf1a94341bb6dba538786dfe42f4b5",
-          "version": "0.3.0"
+          "revision": "870fc7005d8b996e0be1ff536ef03ec9a63a2455",
+          "version": "0.3.1"
         }
       },
       {
@@ -96,8 +96,8 @@
         "repositoryURL": "https://github.com/torusresearch/torus-utils-swift",
         "state": {
           "branch": null,
-          "revision": "03f4e6903e48af69aff0ac59e9b53646b59ae1a4",
-          "version": "0.1.2"
+          "revision": "920b90979d1d5c9b45aa74ec774296014400c959",
+          "version": "0.1.3"
         }
       },
       {
